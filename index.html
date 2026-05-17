@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -21,8 +22,7 @@
     <header class="hero" id="inicio">
         <h1>ZYROX SPORT</h1>
         <p>Fabricantes en joggers y conjuntos deportivos de tela interfil Tallas S M L</p>
-        <!-- <button class="btn-main" onclick="scrollAProductos()">Ver Colección</button> -->
-    </header>
+        </header>
 
     <main class="container" id="productos">
         <div class="section-title">
@@ -30,7 +30,6 @@
         </div>
 
         <div class="product-grid">
-            <!-- Producto 1 -->
             <div class="product-card">
                 <a href="cinta/cinta.html">
                     <img src="img/cinta.jpeg" alt="Conjunto Zyrox" class="product-img">
@@ -38,34 +37,50 @@
                     <span class="badge-tela">Tela Interfil</span>
                     <p class="tallas">Tallas: S - M - L</p>
                 </a>
-                <button class="btn-buy" onclick="pedirWhatsApp('Jogger Premium')">Pedir por WhatsApp</button>
+                <button class="btn-buy" onclick="pedirWhatsApp('Modelo Cinta')">Pedir por WhatsApp</button>
             </div>
 
-            <!-- Producto 2 -->
             <div class="product-card">
                 <img src="img/entero.jpeg" alt="Conjunto Zyrox" class="product-img">
                 <h3>Conjunto Zyrox</h3>
                 <span class="badge-tela">Tela Interfil</span>
                 <p class="tallas">Tallas: S - M - L</p>
-                <button class="btn-buy" onclick="pedirWhatsApp('Conjunto Zyrox')">Pedir por WhatsApp</button>
+                <button class="btn-buy" onclick="pedirWhatsApp('Conjunto Entero')">Pedir por WhatsApp</button>
             </div>
-            <!-- Producto  -->
+
             <div class="product-card">
                 <img src="img/niño.jpeg" alt="Conjunto Zyrox" class="product-img">
                 <h3>Conjunto Zyrox</h3>
                 <span class="badge-tela">Tela Interfil</span>
                 <p class="tallas">Tallas: S - M - L</p>
-                <button class="btn-buy" onclick="pedirWhatsApp('Conjunto Zyrox')">Pedir por WhatsApp</button>
+                <button class="btn-buy" onclick="pedirWhatsApp('Conjunto Niño')">Pedir por WhatsApp</button>
             </div>
         </div>
     </main>
 
     <footer id="contacto">
-        <p>ZYROX SPORT &copy; 2026 | Villa El Salvador, Lima</p>
-        <p>Envíos por Shalom y Olva Courier</p>
-        <p>Atención: Angela - 908 501 761</p>
+        <p>ZYROX SPORT &copy; 2026 | La Victoria, Lima</p>
+        <p>Envíos por Shalom</p>
+        <p>Atención: 908 501 761</p>
     </footer>
 
-    <script src="script.js"></script>
+    <div id="modal-whatsapp" class="modal-wa">
+        <div class="modal-wa-content">
+            <h3>¿A qué número deseas escribir?</h3>
+            <p id="modal-producto-nombre" style="color: var(--gris); font-size: 12px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;"></p>
+            
+            <button class="btn-wa-opt" onclick="enviarMensajeDirecto(1)">
+                🟢 ventas en tienda (936 506 776)
+            </button>
+            
+            <button class="btn-wa-opt" onclick="enviarMensajeDirecto(2)">
+                🟢 venta por redes sociales (908 501 761)
+            </button>
+            
+            <button class="btn-wa-cancel" onclick="cerrarModalWA()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="pedirWasap.js"></script>
 </body>
 </html>

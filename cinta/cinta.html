@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleCinta.css">
-    <title>Colores Disponibles - ZYROX SPORT</title>
+    <!-- <link rel="stylesheet" href="styleCinta.css"> -->
+    <link rel="stylesheet" href="styleCinta.css?v=2">
+    <title>Colores y Tallas - ZYROX SPORT</title>
 </head>
 <body>
-        <nav>
-        <img class="logo" src="../img/logo.jpeg" alt="">
+    <nav>
+        <img class="logo" src="../img/logo.jpeg" alt="ZYROX SPORT">
         <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="#productos">Joggers</a></li>
-            <li><a href="#productos">Conjuntos</a></li>
+            <li><a href="../index.html#productos">Joggers</a></li>
+            <li><a href="../index.html#productos">Conjuntos</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
-    </nav>
     </nav>
 
     <section class="container" id="colores-seccion">
@@ -25,67 +25,245 @@
         </div>
 
         <div class="section-title">
-            <h2>Colores Disponibles</h2>
-            <p>Fabricamos tus conjuntos y joggers en los 7 colores más pedidos</p>
+            <h2>Colores y Tallas - Modelo Cinta</h2>
+            <p>Selecciona las cantidades por talla de cada color que deseas ordenar:</p>
         </div>
 
         <div class="colores-grid">
-            <div class="color-card-v2">
+            <div class="color-card-v2" data-color="Negro">
                 <div class="color-img-container">
                     <img src="imgCinta/negro_cinta.jpeg" alt="Color Negro" class="color-img-real">
                 </div>
-                <h4>Negro Premium</h4>
+                <h4>Negro</h4>
                 <span class="badge-stock">Disponible</span>
-                <button class="btn-buy" onclick="pedirWhatsApp('Jogger Premium')">Pedir por WhatsApp</button>
-   
+                
+                <div class="size-selector-container">
+                    <div class="size-row">
+                        <span class="size-label">Talla L</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="L">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla M</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="M">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla S</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="S">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="color-card-v2">
+            <div class="color-card-v2" data-color="Marino">
                 <div class="color-img-container">
                     <img src="imgCinta/marino_cinta.jpeg" alt="Color Azul Marino" class="color-img-real">
                 </div>
-                <h4>Azul Marino</h4>
+                <h4>Marino</h4>
                 <span class="badge-stock">Disponible</span>
-                <button class="btn-buy" onclick="pedirWhatsApp('Jogger Premium')">Pedir por WhatsApp</button>
+                
+                <div class="size-selector-container">
+                    <div class="size-row">
+                        <span class="size-label">Talla L</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="L">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla M</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="M">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla S</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="S">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="color-card-v2">
+            <div class="color-card-v2" data-color="Melange">
                 <div class="color-img-container">
                     <img src="imgCinta/melange_cintajpeg.jpeg" alt="Color melange" class="color-img-real">
                 </div>
-                <h4>Beige / Arena</h4>
+                <h4>Melange</h4>
                 <span class="badge-stock">Disponible</span>
-                <button class="btn-buy" onclick="pedirWhatsApp('Jogger Premium')">Pedir por WhatsApp</button>
+                
+                <div class="size-selector-container">
+                    <div class="size-row">
+                        <span class="size-label">Talla L</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="L">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla M</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="M">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla S</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="S">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="color-card-v2">
+            <div class="color-card-v2" data-color="Plomo Rata">
                 <div class="color-img-container">
                     <img src="imgCinta/rata_cinta.jpeg" alt="Color rata" class="color-img-real">
                 </div>
-                <h4>Verde Militar</h4>
+                <h4>Plomo Rata</h4>
                 <span class="badge-stock">Disponible</span>
-                <button class="btn-buy" onclick="pedirWhatsApp('Jogger Premium')">Pedir por WhatsApp</button>
+                
+                <div class="size-selector-container">
+                    <div class="size-row">
+                        <span class="size-label">Talla L</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="L">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla M</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="M">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla S</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="S">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="color-card-v2">
+            <div class="color-card-v2" data-color="Azul Alianza">
                 <div class="color-img-container">
                     <img src="imgCinta/azul_alianza_cinta.jpeg" alt="azul alianza" class="color-img-real">
                 </div>
-                <h4>Gris Jaspe</h4>
+                <h4>Azul Alianza</h4>
                 <span class="badge-stock">Disponible</span>
-                <button class="btn-buy" onclick="pedirWhatsApp('Jogger Premium')">Pedir por WhatsApp</button>
+                
+                <div class="size-selector-container">
+                    <div class="size-row">
+                        <span class="size-label">Talla L</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="L">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla M</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="M">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla S</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="S">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="color-card-v2">
+            <div class="color-card-v2" data-color="Verde">
                 <div class="color-img-container">
                     <img src="imgCinta/verde_cintajpeg.jpeg" alt="Color verde" class="color-img-real">
                 </div>
-                <h4>Vino / Guinda</h4>
+                <h4>verde</h4>
                 <span class="badge-stock">Disponible</span>
-                <button class="btn-buy" onclick="pedirWhatsApp('Jogger Premium')">Pedir por WhatsApp</button>
+                
+                <div class="size-selector-container">
+                    <div class="size-row">
+                        <span class="size-label">Talla L</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="L">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla M</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="M">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla S</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="S">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <div class="order-summary-bar">
+            <button class="btn-send-order" onclick="abrirModalWhatsAppGlobal()">
+                🟢 Enviar Pedido por WhatsApp (<span id="total-items">0</span>)
+            </button>
+        </div>
     </section>
+
+    <div id="modal-whatsapp" class="modal-wa">
+        <div class="modal-wa-content">
+            <h3>¿A qué número deseas enviar tu pedido?</h3>
+            <p id="resumen-pedido-texto" style="color: var(--gris); font-size: 11px; margin-bottom: 15px; text-align: left; background: #1a1a1a; padding: 10px; border-radius: 6px; white-space: pre-wrap; max-height: 150px; overflow-y: auto;"></p>
+            
+            <button class="btn-wa-opt" onclick="enviarMensajeCompleto(1)">
+                🟢 Asesoría Ventas 1 (936 506 776)
+            </button>
+            <button class="btn-wa-opt" onclick="enviarMensajeCompleto(2)">
+                🟢 Asesoría Ventas 2 (908 501 761)
+            </button>
+            <button class="btn-wa-cancel" onclick="cerrarModalWA()">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- <script src="pedirCinta.js"></script> -->
+    <script src="pedirCinta.js?v=2"></script>
 </body>
 </html>

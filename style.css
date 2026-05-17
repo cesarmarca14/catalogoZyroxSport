@@ -1,7 +1,8 @@
-/* Variables de color */
+/* ==========================================================================
+   1. VARIABLES DE COLOR Y ESTILOS GENERALES
+   ========================================================================== */
 :root {
-    --negro: #0f0f0f;
-    --oscuro: #1a1a1a;
+    --oscuro: #000000;
     --cian: #00d4ff;
     --blanco: #ffffff;
     --gris: #888888;
@@ -10,15 +11,17 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: var(--negro);
+    background-color: var(--blanco);
     color: var(--blanco);
     scroll-behavior: smooth;
 }
 
-/* Navegación */
+/* ==========================================================================
+   2. NAVEGACIÓN (HEADER & NAV)
+   ========================================================================== */
 nav {
     background-color: #000;
-    padding: 10px 50px; /* Reducido un poco para que no ocupe tanto espacio */
+    padding: 10px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,11 +50,18 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Hero */
+.nav-links a:hover {
+    color: var(--cian);
+}
+
+/* ==========================================================================
+   3. HERO SECTION (BANNER PRINCIPAL)
+   ========================================================================== */
 .hero {
-    /* border: solid red; */
     font-size: 50px;
     font-weight: 900;
     color: var(--blanco);
@@ -61,33 +71,33 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background
-    : url('https://i.postimg.cc/sfS6R2dB/91c4b65b-64ec-4a17-880d-65f75333178a.jpg');
+    background: url('https://i.postimg.cc/sfS6R2dB/91c4b65b-64ec-4a17-880d-65f75333178a.jpg');
     background-size: cover;
     background-position: center;
-
-    /* --- CONTORNO RESALTADO --- */
     -webkit-text-stroke: 1.5px #0592ca; 
     text-shadow: 3px 3px 15px rgba(18, 142, 214, 0.9);
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Productos */
+/* ==========================================================================
+   4. SECCIÓN DE PRODUCTOS PRINCIPALES
+   ========================================================================== */
 .container { 
-    padding: 50px 10%; 
+    padding: 20px 10%; 
+}
+
+.section-title {
+    color: var(--oscuro);
+    text-align: center;
+    font-size: 35px;
 }
 
 .product-grid {
     display: grid;
-    /* Ajustamos el tamaño máximo para que las tarjetas no se estiren demasiado */
     grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); 
     gap: 30px;
-    justify-content: center; /* Centra las tarjetas en la pantalla */
-}
-
-
-.product-card a {
-    text-decoration: none; /* Quita la línea de abajo */
-    color: inherit;        /* Hace que herede el color blanco del contenedor */
+    justify-content: center; 
 }
 
 .product-card {
@@ -98,22 +108,38 @@ nav {
     border: 1px solid #333;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra todo el contenido internamente */
-    transition: transform 0.3s ease;
+    align-items: center; 
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Pequeño efecto al pasar el mouse */
+    transform: translateY(-5px);
+    border-color: var(--cian);
 }
 
-/* --- CAMBIO CLAVE: IMÁGENES CENTRADAS Y CONTROLADAS --- */
+.product-card a {
+    text-decoration: none; 
+    color: inherit;        
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor para proteger el redondeo de bordes */
+.product-img-container {
+    width: 100%;
+    max-width: 220px;   
+    height: 280px;      
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
 .product-img {
     width: 100%;
-    max-width: 220px;   /* Evita que la imagen sea gigante */
-    height: 280px;      /* Altura fija para que todas las tarjetas midan lo mismo */
-    object-fit: cover;  /* Ajusta la foto sin deformarla */
-    border-radius: 8px;
-    margin-bottom: 15px;
+    height: 100%;
+    object-fit: cover;  
     display: block;
 }
 
@@ -139,7 +165,7 @@ nav {
     border: none;
     padding: 12px 20px;
     width: 100%;
-    margin-top: auto; /* Empuja el botón siempre al fondo de la tarjeta */
+    margin-top: auto; 
     cursor: pointer;
     font-weight: bold;
     border-radius: 5px;
@@ -150,10 +176,294 @@ nav {
     background-color: #1ebe57;
 }
 
-/* Footer */
+/* ==========================================================================
+   5. SECCIÓN DE TARJETAS DE COLORES DISPONIBLES
+   ========================================================================== */
+#colores-seccion {
+    padding: 60px 20px;
+    background-color: var(--oscuro);
+    text-align: center;
+}
+
+.colores-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.color-card-v2 {
+    background-color: var(--oscuro);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px 15px;
+    width: 230px;                    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.color-card-v2:hover {
+    transform: translateY(-5px);
+    border-color: #25d366; 
+}
+
+.color-img-container {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.color-img-real {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.color-card-v2 h4 {
+    color: var(--blanco);
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.color-card-v2 .badge-tela {
+    display: inline-block;
+    border: 1px solid var(--cian);
+    color: var(--cian);
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.badge-stock {
+    color: var(--gris);
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+/* ==========================================================================
+   6. FOOTER (PIE DE PÁGINA)
+   ========================================================================== */
 footer {
     padding: 30px;
     text-align: center;
-    background-color: #000;
+    background-color: var(--oscuro);
     border-top: 1px solid #333;
+}
+
+/* ==========================================================================
+   7. VENTANA EMERGENTE (MODAL SELECCIÓN WHATSAPP)
+   ========================================================================== */
+.modal-wa {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-wa-content {
+    background-color: #111111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 24px 20px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);
+    animation: aparecerModal 0.3s ease-out;
+}
+
+.modal-wa-content h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.btn-wa-opt {
+    background-color: #1f1f1f;
+    color: var(--blanco);
+    border: 1px solid #444;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    text-align: left;
+}
+
+.btn-wa-opt:hover {
+    background-color: #25d366;
+    color: #000000;
+    border-color: #25d366;
+}
+
+.btn-wa-cancel {
+    background-color: transparent;
+    color: var(--gris);
+    border: none;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-wa-cancel:hover {
+    color: var(--blanco);
+}
+
+@keyframes aparecerModal {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================================================================
+   8. MODO RESPONSIVO (TABLETS & CELULARES)
+   ========================================================================== */
+
+/* 📱 MODO CELULAR (Proporcional, 2 columnas, imágenes completas y redondeadas) */
+@media (max-width: 600px) {
+    nav {
+        padding: 15px 20px;
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .nav-links {
+        padding: 0;
+        margin: 0;
+        gap: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 12px; 
+    }
+
+    .hero {
+        font-size: 15px; 
+        height: 50vh;    
+        -webkit-text-stroke: 1px #0592ca;
+    }
+
+    .container {
+        padding: 30px 4%; 
+    }
+
+    /* Forzar filas de 2 manteniendo estética */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 12px;
+        max-width: 100%;
+    }
+
+    .colores-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
+        max-width: 100%;
+    }
+
+    .product-card, .color-card-v2 {
+        padding: 10px 6px; 
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Solución para imágenes completas manteniendo redondeado */
+    .product-img-container, .color-img-container {
+        height: 170px; 
+        border-radius: 8px; 
+        overflow: hidden; 
+        margin-bottom: 10px;
+    }
+
+    .product-img, .color-img-real {
+        object-fit: contain !important; 
+    }
+
+    /* Ajuste de textos proporcionales */
+    .section-title {
+        font-size: 20px;
+    }
+
+    .product-card h3, .color-card-v2 h4 {
+        font-size: 13px;
+        margin: 5px 0;
+    }
+
+    .product-card .badge-tela, .color-card-v2 .badge-tela {
+        font-size: 9px;         
+        padding: 3px 8px;
+        margin-bottom: 6px;
+    }
+
+    .product-card .tallas, .color-card-v2 .badge-stock {
+        font-size: 10px;        
+        margin: 4px 0;
+    }
+
+    .btn-buy {
+        padding: 8px 6px;       
+        font-size: 10px;        
+    }
+    
+    .modal-wa-content h3 {
+        font-size: 14px;
+    }
+    
+    .btn-wa-opt {
+        font-size: 11px;
+        padding: 10px;
+    }
+}
+
+/* 慶 MODO TABLET */
+@media (min-width: 601px) and (max-width: 992px) {
+    nav {
+        padding: 10px 30px;
+    }
+
+    .hero {
+        font-size: 40px; 
+        height: 55vh;
+    }
+
+    .container {
+        padding: 40px 5%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+    
+    .colores-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    }
+    
+    .color-card-v2 {
+        width: 100% !important;
+    }
 }

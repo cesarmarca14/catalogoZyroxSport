@@ -1,7 +1,6 @@
 /* Variables de color */
 :root {
-    --negro: #ffffff;
-    --oscuro: #1a1a1a;
+    --oscuro: #000000;
     --cian: #00d4ff;
     --blanco: #ffffff;
     --gris: #888888;
@@ -10,15 +9,15 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: var(--negro);
+    background-color:var(--blanco); /* Asegura tu fondo oscuro */
     color: var(--blanco);
     scroll-behavior: smooth;
 }
 
 /* Navegación */
 nav {
-    background-color: #000;
-    padding: 10px 50px; /* Reducido un poco para que no ocupe tanto espacio */
+    background-color:var(--oscuro);
+    padding: 10px 50px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +50,6 @@ nav {
 
 /* Hero */
 .hero {
-    /* border: solid red; */
     font-size: 50px;
     font-weight: 900;
     color: var(--blanco);
@@ -64,8 +62,6 @@ nav {
     background: url('https://i.postimg.cc/sfS6R2dB/91c4b65b-64ec-4a17-880d-65f75333178a.jpg');
     background-size: cover;
     background-position: center;
-
-    /* --- CONTORNO RESALTADO --- */
     -webkit-text-stroke: 1.5px #0592ca; 
     text-shadow: 3px 3px 15px rgba(18, 142, 214, 0.9);
 }
@@ -75,12 +71,20 @@ nav {
     padding: 50px 10%; 
 }
 
+.section-title {
+    color: var(--blanco); /* Ajustado a blanco para que sea legible en fondo negro */
+    text-align: center;
+    font-size: 32px;
+}
+
+/* --- FILAS DE 2 COLUMNAS --- */
 .product-grid {
     display: grid;
-    /* Ajustamos el tamaño máximo para que las tarjetas no se estiren demasiado */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); 
-    gap: 30px;
-    justify-content: center; /* Centra las tarjetas en la pantalla */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    justify-content: center; 
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .product-card {
@@ -91,20 +95,20 @@ nav {
     border: 1px solid #333;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra todo el contenido internamente */
+    align-items: center; 
     transition: transform 0.3s ease;
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Pequeño efecto al pasar el mouse */
+    transform: translateY(-5px); 
 }
 
 /* --- IMÁGENES CENTRADAS Y CONTROLADAS --- */
 .product-img {
     width: 100%;
-    max-width: 220px;   /* Evita que la imagen sea gigante */
-    height: 280px;      /* Altura fija para que todas las tarjetas midan lo mismo */
-    object-fit: cover;  /* Ajusta la foto sin deformarla */
+    max-width: 220px;   
+    height: 270px;      
+    object-fit: cover;  
     border-radius: 8px;
     margin-bottom: 15px;
     display: block;
@@ -133,9 +137,8 @@ nav {
     border: none;
     padding: 12px 20px;
     width: 100%;
-    margin-top: auto; /* Empuja el botón siempre al fondo de la tarjeta */
+    margin-top: auto; 
     cursor: pointer;
-    font-weight: bold;
     border-radius: 5px;
     transition: background 0.3s;
 }
@@ -147,7 +150,7 @@ nav {
 /* --- Sección de Tarjetas de Colores (Identidad ZYROX) --- */
 #colores-seccion {
     padding: 60px 20px;
-    background-color: var(--negro); /* Utiliza tu variable de fondo oscuro */
+    background-color: var(--oscuro); 
     text-align: center;
 }
 
@@ -160,11 +163,11 @@ nav {
 }
 
 .color-card-v2 {
-    background-color: var(--oscuro); /* Cambiado a var(--oscuro) para emparejar con tus productos */
-    border: 1px solid #333;          /* Borde idéntico al de tus productos */
+    background-color: var(--oscuro); 
+    border: 1px solid #333;          
     border-radius: 12px;
     padding: 20px 15px;
-    width: 230px;                    /* Un poco más compacto que el producto principal */
+    width: 230px;                    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,10 +175,9 @@ nav {
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Efecto hover utilizando tu color verde característico */
 .color-card-v2:hover {
     transform: translateY(-5px);
-    border-color: #25d366; /* Iluminación verde WhatsApp en los bordes */
+    border-color: #25d366; 
 }
 
 .color-img-container {
@@ -189,7 +191,7 @@ nav {
 .color-img-real {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Evita que las imágenes se deformen */
+    object-fit: cover; 
 }
 
 .color-card-v2 h4 {
@@ -197,10 +199,8 @@ nav {
     font-size: 18px;
     margin: 10px 0;
     font-weight: 600;
-    /* border: solid red; */
 }
 
-/* Mismo estilo de óvalo cian usando tus variables globales */
 .color-card-v2 .badge-tela {
     display: inline-block;
     border: 1px solid var(--cian);
@@ -211,14 +211,11 @@ nav {
     margin-bottom: 10px;
 }
 
-/* Estilo para el texto de "Disponible" o las tallas inferiores */
 .color-card-v2 .badge-stock {
-    color: var(--gris);
     font-size: 14px;
     font-weight: bold;
     margin: 5px 0px 14px 0px;
     color: var(--cian);
-    /* border: solid red; */
 }
 
 /* Footer */
@@ -227,4 +224,305 @@ footer {
     text-align: center;
     background-color: #000;
     border-top: 1px solid #333;
+}
+
+/* ==========================================================================
+   NUEVOS COMPONENTES: SELECTOR DE CANTIDAD, BARRA FIJA Y MODAL WA
+   ========================================================================== */
+
+/* Selector de Cantidades dentro de cada tarjeta */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    background-color: #141414;
+    padding: 6px 12px;
+    border-radius: 30px;
+    border: 1px solid #333;
+    width: 85%;
+    box-sizing: border-box;
+}
+
+.btn-qty {
+    background-color: var(--cian);
+    color: #000000;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.btn-qty:hover {
+    background-color: #00b2d6;
+}
+
+.qty-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--blanco);
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Botón flotante/fijo inferior de envío total */
+.order-summary-bar {
+    margin-top: 45px;
+    text-align: center;
+    position: sticky;
+    bottom: 20px;
+    z-index: 900;
+}
+
+.btn-send-order {
+    background-color: #25d366;
+    color: var(--oscuro);
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-send-order:hover {
+    background-color: #1ebe57;
+    transform: scale(1.03);
+}
+
+/* Ventana emergente (Modal de selección de línea) */
+.modal-wa {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-wa-content {
+    background-color: #111111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 24px 20px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);
+    animation: aparecerModal 0.3s ease-out;
+}
+
+.modal-wa-content h3 {
+    margin-top: 0;
+    font-size: 15px;
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.btn-wa-opt {
+    background-color: #1f1f1f;
+    color: var(--blanco);
+    border: 1px solid #444;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    text-align: left;
+}
+
+.btn-wa-opt:hover {
+    background-color: #25d366;
+    color: #000000;
+    border-color: #25d366;
+}
+
+.btn-wa-cancel {
+    background-color: transparent;
+    color: var(--gris);
+    border: none;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-wa-cancel:hover {
+    color: var(--blanco);
+}
+
+@keyframes aparecerModal {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================================================================
+   7. MODO RESPONSIVO (TABLETS & CELULARES)
+   ========================================================================== */
+
+/* 📱 MODO CELULAR */
+@media (max-width: 600px) {
+    nav {
+        padding: 15px 20px;
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .nav-links {
+        padding: 0;
+        margin: 0;
+        gap: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 12px; 
+    }
+
+    .hero {
+        font-size: 15px; 
+        height: 50vh;    
+        -webkit-text-stroke: 1px #0592ca;
+    }
+
+    .container {
+        padding: 30px 4%; 
+    }
+
+    /* --- Fuerza filas de 2 en productos para celular --- */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 12px;
+        max-width: 100%;
+    }
+
+    /* --- Fuerza filas de 2 en la sección de colores para celular --- */
+    .colores-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
+        max-width: 100%;
+    }
+
+    .product-card, .color-card-v2 {
+        padding: 12px 8px; 
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* ==========================================================================
+       ⚠️ SE CONSERVA TU ALTURA ORIGINAL SIN CAMBIOS DE PROPORCIÓN EN LAS IMÁGENES
+       ========================================================================== */
+    .product-img, .color-img-container {
+        height: 180px; 
+    }
+
+    /* Ajustes para los Selectores de Cantidad en Celular */
+    .quantity-selector {
+        width: 100%;
+        gap: 8px;
+        padding: 4px 6px;
+    }
+    
+    .btn-qty {
+        width: 22px;
+        height: 22px;
+        font-size: 13px;
+    }
+    
+    .qty-value {
+        font-size: 13px;
+    }
+
+    .btn-send-order {
+        padding: 12px 25px;
+        font-size: 14px;
+        width: 95%;
+    }
+
+    /* Ajuste Proporcional de Textos */
+    .section-title {
+        color: var(--oscuro);
+        font-size: 18px; 
+    }
+
+    .product-card .badge-tela, 
+    .color-card-v2 .badge-tela {
+        font-size: 10px;        
+        padding: 3px 10px;
+        margin-bottom: 6px;
+    }
+
+    .product-card .tallas {
+        font-size: 11px;        
+        margin: 6px 0;
+    }
+
+    .product-card .btn-buy {
+        padding: 8px 10px;      
+        font-size: 11px;        
+    }
+
+    .color-card-v2 h4 {
+        font-size: 13px;        
+        margin: 6px 0;
+    }
+
+    .color-card-v2 .badge-stock {
+        font-size: 11px;        
+        margin: 2px 0px 8px 0px;
+    }
+}
+
+/* 慶 MODO TABLET */
+@media (min-width: 601px) and (max-width: 992px) {
+    nav {
+        padding: 10px 30px;
+    }
+
+    .hero {
+        font-size: 40px; 
+        height: 55vh;
+    }
+
+    .container {
+        padding: 40px 5%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 20px;
+    }
+    
+    .colores-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+        max-width: 700px;
+        margin: 30px auto 0 auto;
+    }
+    
+    .color-card-v2 {
+        width: 100% !important;
+    }
 }
