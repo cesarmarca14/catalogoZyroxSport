@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZYROX SPORT - Tienda Oficial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <img class="logo" src="img/logo.jpeg" alt="">
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Joggers</a></li>
+            <li><a href="#productos">Conjuntos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="inicio">
+        <h1>ZYROX SPORT</h1>
+        <p>Fabricantes en joggers y conjuntos deportivos de tela interfil Tallas S M L</p>
+        <!-- <button class="btn-main" onclick="scrollAProductos()">Ver Colección</button> -->
+    </header>
+
+    <main class="container" id="productos">
+        <div class="section-title">
+            <h2>Nuestros Productos</h2>
+        </div>
+
+        <div class="product-grid">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <a href="cinta/cinta.html">
+                    <img src="img/cinta.jpeg" alt="Conjunto Zyrox" class="product-img">
+                    <h3>Modelo Cinta</h3>
+                    <span class="badge-tela">Tela Interfil</span>
+                    <p class="tallas">Tallas: S - M - L</p>
+                </a>
+                <button class="btn-buy" onclick="pedirWhatsApp('Jogger Premium')">Pedir por WhatsApp</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="img/entero.jpeg" alt="Conjunto Zyrox" class="product-img">
+                <h3>Conjunto Zyrox</h3>
+                <span class="badge-tela">Tela Interfil</span>
+                <p class="tallas">Tallas: S - M - L</p>
+                <button class="btn-buy" onclick="pedirWhatsApp('Conjunto Zyrox')">Pedir por WhatsApp</button>
+            </div>
+            <!-- Producto  -->
+            <div class="product-card">
+                <img src="img/niño.jpeg" alt="Conjunto Zyrox" class="product-img">
+                <h3>Conjunto Zyrox</h3>
+                <span class="badge-tela">Tela Interfil</span>
+                <p class="tallas">Tallas: S - M - L</p>
+                <button class="btn-buy" onclick="pedirWhatsApp('Conjunto Zyrox')">Pedir por WhatsApp</button>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto">
+        <p>ZYROX SPORT &copy; 2026 | Villa El Salvador, Lima</p>
+        <p>Envíos por Shalom y Olva Courier</p>
+        <p>Atención: Angela - 908 501 761</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
