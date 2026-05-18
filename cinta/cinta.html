@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="styleCinta.css"> -->
     <link rel="stylesheet" href="styleCinta.css?v=2">
     <title>Colores y Tallas - ZYROX SPORT</title>
 </head>
 <body>
     <nav>
         <img class="logo" src="../img/logo.jpeg" alt="ZYROX SPORT">
-        <ul class="nav-links">
+         <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../index.html#productos">Joggers</a></li>
-            <li><a href="../index.html#productos">Conjuntos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="../cinta/cinta.html">Modelo cinta</a></li>
+            <li><a href="../color entero/enteo.html">Color Entero</a></li>
+            <li><a href="../conjuntos/conjunto.html">Conjuntos</a></li>
         </ul>
     </nav>
 
@@ -32,7 +31,7 @@
         <div class="colores-grid">
             <div class="color-card-v2" data-color="Negro">
                 <div class="color-img-container">
-                    <img src="imgCinta/negro_cinta.jpeg" alt="Color Negro" class="color-img-real">
+                    <img src="imgCinta/negro_cinta.jpeg" alt="Color Negro" class="color-img-real cursor-pointer" onclick="abrirLightbox(this.src)">
                 </div>
                 <h4>Negro</h4>
                 <span class="badge-stock">Disponible</span>
@@ -67,7 +66,7 @@
 
             <div class="color-card-v2" data-color="Marino">
                 <div class="color-img-container">
-                    <img src="imgCinta/marino_cinta.jpeg" alt="Color Azul Marino" class="color-img-real">
+                    <img src="imgCinta/marino_cinta.jpeg" alt="Color Azul Marino" class="color-img-real cursor-pointer" onclick="abrirLightbox(this.src)">
                 </div>
                 <h4>Marino</h4>
                 <span class="badge-stock">Disponible</span>
@@ -102,7 +101,7 @@
 
             <div class="color-card-v2" data-color="Melange">
                 <div class="color-img-container">
-                    <img src="imgCinta/melange_cintajpeg.jpeg" alt="Color melange" class="color-img-real">
+                    <img src="imgCinta/melange_cintajpeg.jpeg" alt="Color melange" class="color-img-real cursor-pointer" onclick="abrirLightbox(this.src)">
                 </div>
                 <h4>Melange</h4>
                 <span class="badge-stock">Disponible</span>
@@ -137,7 +136,7 @@
 
             <div class="color-card-v2" data-color="Plomo Rata">
                 <div class="color-img-container">
-                    <img src="imgCinta/rata_cinta.jpeg" alt="Color rata" class="color-img-real">
+                    <img src="imgCinta/rata_cinta.jpeg" alt="Color rata" class="color-img-real cursor-pointer" onclick="abrirLightbox(this.src)">
                 </div>
                 <h4>Plomo Rata</h4>
                 <span class="badge-stock">Disponible</span>
@@ -172,7 +171,7 @@
 
             <div class="color-card-v2" data-color="Azul Alianza">
                 <div class="color-img-container">
-                    <img src="imgCinta/azul_alianza_cinta.jpeg" alt="azul alianza" class="color-img-real">
+                    <img src="imgCinta/azul_alianza_cinta.jpeg" alt="azul alianza" class="color-img-real cursor-pointer" onclick="abrirLightbox(this.src)">
                 </div>
                 <h4>Azul Alianza</h4>
                 <span class="badge-stock">Disponible</span>
@@ -207,7 +206,7 @@
 
             <div class="color-card-v2" data-color="Verde">
                 <div class="color-img-container">
-                    <img src="imgCinta/verde_cintajpeg.jpeg" alt="Color verde" class="color-img-real">
+                    <img src="imgCinta/verde_cintajpeg.jpeg" alt="Color verde" class="color-img-real cursor-pointer" onclick="abrirLightbox(this.src)">
                 </div>
                 <h4>verde</h4>
                 <span class="badge-stock">Disponible</span>
@@ -263,7 +262,15 @@
         </div>
     </div>
 
-    <!-- <script src="pedirCinta.js"></script> -->
     <script src="pedirCinta.js?v=2"></script>
+
+    <div id="image-lightbox" class="lightbox" onclick="cerrarLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-wrapper" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="Vista ampliada" onclick="toggleZoom(this)">
+        </div>
+    </div>
+
+    <script src="lupa.js?v=2"></script>
 </body>
 </html>

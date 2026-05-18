@@ -28,7 +28,7 @@ function abrirModalWhatsAppGlobal() {
     const urlBase = window.location.origin + window.location.pathname.replace(/[^\/]*$/, '');
     
     // Ruta de la foto del buso negro que representa a todo el "Modelo Cinta"
-    const fotoModeloGeneral = `${urlBase}img_Entero/negro_Entero.jpeg`;
+    const fotoModeloGeneral = `${urlBase}img_conjunto/rata_conjunto.jpeg`;
 
     document.querySelectorAll('.color-card-v2').forEach(tarjeta => {
         const colorNombre = tarjeta.getAttribute('data-color');

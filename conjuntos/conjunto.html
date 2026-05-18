@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styleCinta.css"> -->
+    <link rel="stylesheet" href="../cinta/styleCinta.css">
+    <title>Colores y Tallas - ZYROX SPORT</title>
+</head>
+<body>
+    <nav>
+        <img class="logo" src="../img/logo.jpeg" alt="ZYROX SPORT">
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../cinta/cinta.html">Modelo cinta</a></li>
+            <li><a href="../color entero/enteo.html">Color Entero</a></li>
+            <li><a href="../conjuntos/conjunto.html">Conjuntos</a></li>
+        </ul>
+    </nav>
+
+    <section class="container" id="colores-seccion">
+        
+        <div class="back-container">
+            <a href="../index.html" class="btn-back">← Volver al Catálogo</a>
+        </div>
+
+        <div class="section-title">
+            <h2>Colores y Tallas - Conjuntos Zirox</h2>
+            <p>Selecciona las cantidades por talla de cada color que deseas ordenar:</p>
+        </div>
+
+        <div class="colores-grid">
+            <div class="color-card-v2" data-color="Negro">
+                <div class="color-img-container">
+                    <img src="img_conjunto/negro_conjunto.jpeg" alt="Negro" class="color-img-real">
+                </div>
+                <h4>Negro</h4>
+                <span class="badge-stock">Disponible</span>
+                
+                <div class="size-selector-container">
+                    <div class="size-row">
+                        <span class="size-label">Talla L</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="L">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla M</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="M">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla S</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="S">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-card-v2" data-color="Marino">
+                <div class="color-img-container">
+                    <img src="img_conjunto/marino_conjunto.jpeg" alt="Entero" class="color-img-real">
+                </div>
+                <h4>Marino</h4>
+                <span class="badge-stock">Disponible</span>
+                
+                <div class="size-selector-container">
+                    <div class="size-row">
+                        <span class="size-label">Talla L</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="L">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla M</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="M">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla S</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="S">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-card-v2" data-color="Melange">
+                <div class="color-img-container">
+                    <img src="img_conjunto/melange_conjunto.jpeg" alt="Color melange" class="color-img-real">
+                </div>
+                <h4>Melange</h4>
+                <span class="badge-stock">Disponible</span>
+                
+                <div class="size-selector-container">
+                    <div class="size-row">
+                        <span class="size-label">Talla L</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="L">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla M</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="M">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla S</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="S">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-card-v2" data-color="Negro">
+                <div class="color-img-container">
+                    <img src="img_conjunto/negro_conjunto.jpeg" alt="Color verde" class="color-img-real">
+                </div>
+                <h4>Negro</h4>
+                <span class="badge-stock">Disponible</span>
+                
+                <div class="size-selector-container">
+                    <div class="size-row">
+                        <span class="size-label">Talla L</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="L">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla M</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="M">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <span class="size-label">Talla S</span>
+                        <div class="quantity-selector">
+                            <button class="btn-qty" onclick="cambiarCantidad(this, -1)">-</button>
+                            <span class="qty-value" data-talla="S">0</span>
+                            <button class="btn-qty" onclick="cambiarCantidad(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                </div>
+            </div>
+ </div>
+
+        <div class="order-summary-bar">
+            <button class="btn-send-order" onclick="abrirModalWhatsAppGlobal()">
+                🟢 Enviar Pedido por WhatsApp (<span id="total-items">0</span>)
+            </button>
+        </div>
+    </section>
+
+    <div id="modal-whatsapp" class="modal-wa">
+        <div class="modal-wa-content">
+            <h3>¿A qué número deseas enviar tu pedido?</h3>
+            <p id="resumen-pedido-texto" style="color: var(--gris); font-size: 11px; margin-bottom: 15px; text-align: left; background: #1a1a1a; padding: 10px; border-radius: 6px; white-space: pre-wrap; max-height: 150px; overflow-y: auto;"></p>
+            
+            <button class="btn-wa-opt" onclick="enviarMensajeCompleto(1)">
+                🟢 ventas en tienda  (936 506 776)
+            </button>
+            <button class="btn-wa-opt" onclick="enviarMensajeCompleto(2)">
+                🟢 venta por redes sociales (908 501 761)
+            </button>
+            <button class="btn-wa-cancel" onclick="cerrarModalWA()">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- <script src="pedirCinta.js"></script> -->
+    <script src="pedirConjuntos.js"></script>
+</body>
+</html>
