@@ -103,6 +103,7 @@ nav {
 }
 
 .product-img {
+    /* border: solid red; */
     width: 100%;
     max-width: 220px;   
     height: 270px;      

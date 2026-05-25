@@ -1,5 +1,30 @@
 let textoPedidoGlobal = "";
 
+// --- NUEVA LÓGICA: VISTA PREVIA DE IMAGEN EN GRANDE ---
+document.addEventListener("DOMContentLoaded", () => {
+    // Escucha el clic en todas las imágenes de los colores
+    document.querySelectorAll('.color-img-real').forEach(imagen => {
+        imagen.addEventListener('click', function() {
+            const srcImagen = this.src;
+            const modalImagen = document.getElementById('modal-imagen');
+            
+            if (modalImagen) {
+                document.getElementById('imagen-grande-src').src = srcImagen;
+                modalImagen.style.display = 'flex';
+            }
+        });
+    });
+});
+
+// Función para cerrar la vista previa de la imagen (Retroceder)
+function cerrarImagenGrande() {
+    const modalImagen = document.getElementById('modal-imagen');
+    if (modalImagen) {
+        modalImagen.style.display = 'none';
+    }
+}
+// ------------------------------------------------------
+
 function cambiarCantidad(boton, cambio) {
     const selector = boton.parentElement;
     const visualizador = selector.querySelector('.qty-value');
@@ -28,7 +53,7 @@ function abrirModalWhatsAppGlobal() {
     const urlBase = window.location.origin + window.location.pathname.replace(/[^\/]*$/, '');
     
     // Ruta de la foto del buso negro que representa a todo el "Modelo Cinta"
-    const fotoModeloGeneral = `${urlBase}img_Entero/negro_Entero.jpeg`;
+    const fotoModeloGeneral = `${urlBase}imgCinta/negro_cinta.jpeg`;
 
     document.querySelectorAll('.color-card-v2').forEach(tarjeta => {
         const colorNombre = tarjeta.getAttribute('data-color');
@@ -44,7 +69,6 @@ function abrirModalWhatsAppGlobal() {
             }
         });
         
-        // Si hay prendas seleccionadas en este color, se agregan limpiamente sin links repetidos
         if (detallesDeEsteColor.length > 0) {
             pedidoDetalle += `*${colorNombre}*:\n  ${detallesDeEsteColor.join('\n  ')}\n\n`;
         }
@@ -55,10 +79,8 @@ function abrirModalWhatsAppGlobal() {
         return;
     }
     
-    // ARMADO DEL MENSAJE: El enlace general del modelo va justo debajo del título
     textoPedidoGlobal = `Hola ZYROX SPORT, deseo hacer un pedido del *Modelo Cinta*:\n📸 Foto de referencia: ${fotoModeloGeneral}\n\n${pedidoDetalle}*Total prendas:* ${totalPrendas}`;
     
-    // Mostrar resumen en el modal de la página
     document.getElementById("resumen-pedido-texto").innerText = `Modelo Cinta\nRef: ${fotoModeloGeneral}\n\n` + pedidoDetalle + `Total: ${totalPrendas} prendas.`;
     document.getElementById("modal-whatsapp").style.display = "flex";
 }
@@ -82,9 +104,15 @@ function enviarMensajeCompleto(opcionNumero) {
     cerrarModalWA();
 }
 
+// Cierre de modales al hacer clic en los fondos oscuros
 window.onclick = function(event) {
-    const modal = document.getElementById("modal-whatsapp");
-    if (event.target == modal) {
+    const modalWA = document.getElementById("modal-whatsapp");
+    const modalImg = document.getElementById("modal-imagen");
+    
+    if (event.target == modalWA) {
         cerrarModalWA();
+    }
+    if (event.target == modalImg) {
+        cerrarImagenGrande();
     }
 }

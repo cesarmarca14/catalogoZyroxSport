@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="styleCinta.css"> -->
-    <link rel="stylesheet" href="../cinta/styleCinta.css">
+    <link rel="stylesheet" href="color-entero.css">
     <title>Colores y Tallas - ZYROX SPORT</title>
 </head>
 <body>
@@ -25,14 +24,14 @@
         </div>
 
         <div class="section-title">
-            <h2>Colores y Tallas - Modelo Cinta</h2>
+            <h2>Colores y Tallas - Modelo Color Entero</h2>
             <p>Selecciona las cantidades por talla de cada color que deseas ordenar:</p>
         </div>
 
         <div class="colores-grid">
             <div class="color-card-v2" data-color="Negro">
                 <div class="color-img-container">
-                    <img src="img_Entero/negro_Entero.jpeg" alt="Negro" class="color-img-real">
+                    <img src="img_Entero/negro_Entero.jpeg" alt="Negro" class="color-img-real cursor-pointer">
                 </div>
                 <h4>Negro</h4>
                 <span class="badge-stock">Disponible</span>
@@ -67,7 +66,7 @@
 
             <div class="color-card-v2" data-color="Marino">
                 <div class="color-img-container">
-                    <img src="img_Entero/acero_Entero.jpeg" alt="Entero" class="color-img-real">
+                    <img src="img_Entero/acero_Entero.jpeg" alt="Entero" class="color-img-real cursor-pointer">
                 </div>
                 <h4>Acero</h4>
                 <span class="badge-stock">Disponible</span>
@@ -102,7 +101,7 @@
 
             <div class="color-card-v2" data-color="Melange">
                 <div class="color-img-container">
-                    <img src="img_Entero/melange_Entero.jpeg" alt="Color melange" class="color-img-real">
+                    <img src="img_Entero/melange_Entero.jpeg" alt="Color melange" class="color-img-real cursor-pointer">
                 </div>
                 <h4>Melange</h4>
                 <span class="badge-stock">Disponible</span>
@@ -137,7 +136,7 @@
 
             <div class="color-card-v2" data-color="Verde">
                 <div class="color-img-container">
-                    <img src="img_Entero/verde_Enterojpeg.jpeg" alt="Color verde" class="color-img-real">
+                    <img src="img_Entero/verde_Enterojpeg.jpeg" alt="Color verde" class="color-img-real cursor-pointer">
                 </div>
                 <h4>Verde</h4>
                 <span class="badge-stock">Disponible</span>
@@ -172,7 +171,7 @@
 
             <div class="color-card-v2" data-color="Beiz">
                 <div class="color-img-container">
-                    <img src="img_Entero/beiz_Entero.jpeg" alt="Beiz" class="color-img-real">
+                    <img src="img_Entero/beiz_Entero.jpeg" alt="Beiz" class="color-img-real cursor-pointer">
                 </div>
                 <h4>Beiz</h4>
                 <span class="badge-stock">Disponible</span>
@@ -207,7 +206,7 @@
 
             <div class="color-card-v2" data-color="Marino">
                 <div class="color-img-container">
-                    <img src="img_Entero/marino_entero.jpeg" alt="Color verde" class="color-img-real">
+                    <img src="img_Entero/marino_entero.jpeg" alt="Color verde" class="color-img-real cursor-pointer">
                 </div>
                 <h4>Marino</h4>
                 <span class="badge-stock">Disponible</span>
@@ -239,9 +238,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="color-card-v2" data-color="Rata">
                 <div class="color-img-container">
-                    <img src="img_Entero/color_rata_entero.jpeg" alt="Color verde" class="color-img-real">
+                    <img src="img_Entero/color_rata_entero.jpeg" alt="Color verde" class="color-img-real cursor-pointer">
                 </div>
                 <h4>Rata</h4>
                 <span class="badge-stock">Disponible</span>
@@ -273,9 +273,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="color-card-v2" data-color="Azul Alianza">
                 <div class="color-img-container">
-                    <img src="img_Entero/azul_alianza.jpeg" alt="Color verde" class="color-img-real">
+                    <img src="img_Entero/azul_alianza.jpeg" alt="Color verde" class="color-img-real cursor-pointer">
                 </div>
                 <h4>Azul Alianza</h4>
                 <span class="badge-stock">Disponible</span>
@@ -307,7 +308,6 @@
                     </div>
                 </div>
             </div>
-        
         </div>
 
         <div class="order-summary-bar">
@@ -332,7 +332,14 @@
         </div>
     </div>
 
-    <!-- <script src="pedirCinta.js"></script> -->
+    <div id="modal-imagen" class="modal-wa">
+        <span class="close-modal" onclick="cerrarImagenGrande()">&times;</span>
+        <div class="modal-wa-content" style="max-width: 100%; background: transparent; border: none; box-shadow: none;" onclick="event.stopPropagation()">
+            <img id="imagen-grande-src" src="" alt="Vista previa" style="width: 100%; max-height: 75vh; object-fit: contain; border-radius: 8px;">
+            <p style="color: white; margin-top: 15px; font-weight: bold; font-size: 14px;">← Haz clic afuera o en la X para regresar</p>
+        </div>
+    </div>
+
     <script src="pedirEntero.js?v=2"></script>
 </body>
 </html>

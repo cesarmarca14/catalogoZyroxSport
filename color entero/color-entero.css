@@ -276,7 +276,7 @@ nav {
     transform: scale(1.03);
 }
 
-/* Modal WA */
+/* Modal WA e Imagen (Base compartida) */
 .modal-wa {
     display: none;
     position: fixed;
@@ -304,6 +304,21 @@ nav {
     box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);
     animation: aparecerModal 0.3s ease-out;
 }
+
+/* --- NUEVOS ESTILOS PARA LA VISTA PREVIA --- */
+#modal-imagen {
+    background-color: rgba(0, 0, 0, 0.95); /* Fondo más oscuro para la foto */
+}
+
+.cursor-pointer {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.cursor-pointer:hover {
+    opacity: 0.85;
+}
+/* ------------------------------------------- */
 
 .close-modal {
     position: absolute;
