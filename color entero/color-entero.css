@@ -276,7 +276,7 @@ nav {
     transform: scale(1.03);
 }
 
-/* Modal WA e Imagen (Base compartida) */
+/* Modales Base (Compartido) */
 .modal-wa {
     display: none;
     position: fixed;
@@ -305,9 +305,50 @@ nav {
     animation: aparecerModal 0.3s ease-out;
 }
 
-/* --- NUEVOS ESTILOS PARA LA VISTA PREVIA --- */
+/* --- VISTA PREVIA ADAPTADA (PANTALLA COMPLETA CONTROLADA) --- */
 #modal-imagen {
-    background-color: rgba(0, 0, 0, 0.95); /* Fondo más oscuro para la foto */
+    background-color: rgba(0, 0, 0, 0.95);
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+}
+
+.modal-preview-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    max-height: 80vh; 
+}
+
+#imagen-grande-src {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100vh; 
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+/* //la x para salir de pantalla completa */
+.close-modal-img {
+    position: absolute;
+    top: 10px;    
+    right: 15px;
+    color: #1ebe57;
+    font-size: 65px; 
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    z-index: 2100;
+    transition: transform 0.2s;
+}
+
+.close-modal-img:hover {
+    transform: scale(1.1);
+    color: #ffffff;
 }
 
 .cursor-pointer {
@@ -318,7 +359,7 @@ nav {
 .cursor-pointer:hover {
     opacity: 0.85;
 }
-/* ------------------------------------------- */
+/* ------------------------------------------------------------- */
 
 .close-modal {
     position: absolute;
@@ -394,6 +435,21 @@ nav {
     .colores-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 12px; max-width: 100%; }
     .product-card, .color-card-v2 { padding: 12px 8px; width: 100% !important; box-sizing: border-box; }
     .product-img, .color-img-container { height: 180px; }
+    
+    /* Ajustes específicos para móviles en Vista Previa */
+    .modal-preview-wrapper {
+        max-width: 95%;
+        max-height: 75vh;
+    }
+    #imagen-grande-src {
+        max-height: 75vh;
+    }
+    .close-modal-img {
+        font-size: 42px;
+        top: 8px;
+        right: 12px;
+    }
+    
     .quantity-selector { width: 100%; gap: 8px; padding: 4px 6px; }
     .btn-qty { width: 22px; height: 22px; font-size: 13px; }
     .qty-value { font-size: 13px; }
