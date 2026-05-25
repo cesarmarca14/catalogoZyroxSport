@@ -323,7 +323,7 @@
             <p id="resumen-pedido-texto" style="color: var(--gris); font-size: 11px; margin-bottom: 15px; text-align: left; background: #1a1a1a; padding: 10px; border-radius: 6px; white-space: pre-wrap; max-height: 150px; overflow-y: auto;"></p>
             
             <button class="btn-wa-opt" onclick="enviarMensajeCompleto(1)">
-                🟢 ventas en tienda  (936 506 776)
+                🟢 ventas en tienda (936 506 776)
             </button>
             <button class="btn-wa-opt" onclick="enviarMensajeCompleto(2)">
                 🟢 venta por redes sociales (908 501 761)
@@ -332,13 +332,12 @@
         </div>
     </div>
 
-    <div id="modal-imagen" class="modal-wa">
-        <span class="close-modal" onclick="cerrarImagenGrande()">&times;</span>
-        <div class="modal-wa-content" style="max-width: 100%; background: transparent; border: none; box-shadow: none;" onclick="event.stopPropagation()">
-            <img id="imagen-grande-src" src="" alt="Vista previa" style="width: 100%; max-height: 75vh; object-fit: contain; border-radius: 8px;">
-            <p style="color: white; margin-top: 15px; font-weight: bold; font-size: 14px;">← Haz clic afuera o en la X para regresar</p>
-        </div>
+   <div id="modal-imagen" class="modal-wa" onclick="cerrarImagenGrande()">
+    <div class="modal-preview-wrapper" onclick="event.stopPropagation()">
+        <span class="close-modal-img" onclick="cerrarImagenGrande()">&times;</span>
+        <img id="imagen-grande-src" src="" alt="Vista previa">
     </div>
+</div>
 
     <script src="pedirEntero.js?v=2"></script>
 </body>
