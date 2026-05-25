@@ -1,0 +1,79 @@
+/* --- VISTA PREVIA ADAPTADA (PANTALLA COMPLETA CONTROLADA) --- */
+#modal-imagen {
+    display: none; /* Se controla dinámicamente con JS */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95); /* Fondo más oscuro para la foto */
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.modal-preview-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    max-height: 80vh; 
+}
+
+#imagen-grande-src {
+    width: auto;
+    height: auto;
+    max-width: 120%;
+    max-height: 100vh; 
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* La x para salir de pantalla completa */
+.close-modal-img {
+    position: absolute;
+    top: 10px;    
+    right: 15px;
+    color: #1ebe57;
+    font-size: 65px; 
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    z-index: 2100;
+    transition: transform 0.2s;
+}
+
+.close-modal-img:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.cursor-pointer:hover {
+    opacity: 0.85;
+}
+
+/* Ajustes específicos para móviles en Vista Previa (Media Query) */
+@media (max-width: 600px) {
+    .modal-preview-wrapper {
+        max-width: 95%;
+        max-height: 75vh;
+    }
+    #imagen-grande-src {
+        max-height: 75vh;
+    }
+    .close-modal-img {
+        font-size: 42px;
+        top: 8px;
+        right: 12px;
+    }
+}

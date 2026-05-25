@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="conjunto-style.css">
+    <link rel="stylesheet" href="../styloscard/conjunto-style.css">
+    <link rel="stylesheet" href="../efectos/zoom/stylelupa.css">
     <title>Colores y Tallas - ZYROX SPORT</title>
 </head>
 <body>
@@ -196,7 +197,14 @@
         </div>
     </div>
 
+      <div id="modal-imagen" class="modal-wa" onclick="cerrarImagenGrande()">
+    <div class="modal-preview-wrapper" onclick="event.stopPropagation()">
+        <span class="close-modal-img" onclick="cerrarImagenGrande()">&times;</span>
+        <img id="imagen-grande-src" src="" alt="Vista previa">
+    </div>
+
     <!-- <script src="pedirCinta.js"></script> -->
     <script src="pedirConjuntos.js"></script>
+    <script src="../efectos/zoom/lupa.js"></script>
 </body>
 </html>

@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleCinta.css?v=2">
+
+    <link rel="stylesheet" href="../styloscard/conjunto-style.css">
+    <link rel="stylesheet" href="../efectos/zoom/stylelupa.css">
     <title>Colores y Tallas - ZYROX SPORT</title>
 </head>
 <body>
     <nav>
         <img class="logo" src="../img/logo.jpeg" alt="ZYROX SPORT">
-         <ul class="nav-links">
+        <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="../cinta/cinta.html">Modelo cinta</a></li>
             <li><a href="../color entero/enteo.html">Color Entero</a></li>
@@ -31,7 +33,7 @@
         <div class="colores-grid">
             <div class="color-card-v2" data-color="Negro">
                 <div class="color-img-container">
-                    <img src="imgCinta/negro_cinta.jpeg" alt="Color Negro" class="color-img-real cursor-pointer" onclick="window.open(this.src, '_blank')">
+                    <img src="imgCinta/negro_cinta.jpeg" alt="Negro" class="color-img-real">
                 </div>
                 <h4>Negro</h4>
                 <span class="badge-stock">Disponible</span>
@@ -66,7 +68,7 @@
 
             <div class="color-card-v2" data-color="Marino">
                 <div class="color-img-container">
-                    <img src="imgCinta/marino_cinta.jpeg" alt="Color Azul Marino" class="color-img-real cursor-pointer" onclick="window.open(this.src, '_blank')">
+                    <img src="imgCinta/marino_cinta.jpeg" alt="Entero" class="color-img-real">
                 </div>
                 <h4>Marino</h4>
                 <span class="badge-stock">Disponible</span>
@@ -101,7 +103,7 @@
 
             <div class="color-card-v2" data-color="Melange">
                 <div class="color-img-container">
-                    <img src="imgCinta/melange_cintajpeg.jpeg" alt="Color melange" class="color-img-real cursor-pointer" onclick="window.open(this.src, '_blank')">
+                    <img src="imgCinta/melange_cintajpeg.jpeg" alt="Color melange" class="color-img-real">
                 </div>
                 <h4>Melange</h4>
                 <span class="badge-stock">Disponible</span>
@@ -134,11 +136,11 @@
                 </div>
             </div>
 
-            <div class="color-card-v2" data-color="Plomo Rata">
+            <div class="color-card-v2" data-color="Rata">
                 <div class="color-img-container">
-                    <img src="imgCinta/rata_cinta.jpeg" alt="Color rata" class="color-img-real cursor-pointer" onclick="window.open(this.src, '_blank')">
+                    <img src="imgCinta/rata_cinta.jpeg" alt="Color verde" class="color-img-real">
                 </div>
-                <h4>Plomo Rata</h4>
+                <h4>Rata</h4>
                 <span class="badge-stock">Disponible</span>
                 
                 <div class="size-selector-container">
@@ -168,10 +170,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="color-card-v2" data-color="Azul Alianza">
                 <div class="color-img-container">
-                    <img src="imgCinta/azul_alianza_cinta.jpeg" alt="azul alianza" class="color-img-real cursor-pointer" onclick="window.open(this.src, '_blank')">
+                    <img src="imgCinta/azul_alianza_cinta.jpeg" alt="Color verde" class="color-img-real">
                 </div>
                 <h4>Azul Alianza</h4>
                 <span class="badge-stock">Disponible</span>
@@ -203,10 +204,9 @@
                     </div>
                 </div>
             </div>
-
-            <div class="color-card-v2" data-color="Verde">
+            <div class="color-card-v2" data-color="verde">
                 <div class="color-img-container">
-                    <img src="imgCinta/verde_cintajpeg.jpeg" alt="Color verde" class="color-img-real cursor-pointer" onclick="window.open(this.src, '_blank')">
+                    <img src="imgCinta/verde_cintajpeg.jpeg" alt="Color verde" class="color-img-real">
                 </div>
                 <h4>verde</h4>
                 <span class="badge-stock">Disponible</span>
@@ -238,7 +238,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+
+                </div>
+            </div>
+ </div>
 
         <div class="order-summary-bar">
             <button class="btn-send-order" onclick="abrirModalWhatsAppGlobal()">
@@ -262,6 +265,14 @@
         </div>
     </div>
 
-    <script src="pedirCinta.js?v=2"></script>
+      <div id="modal-imagen" class="modal-wa" onclick="cerrarImagenGrande()">
+    <div class="modal-preview-wrapper" onclick="event.stopPropagation()">
+        <span class="close-modal-img" onclick="cerrarImagenGrande()">&times;</span>
+        <img id="imagen-grande-src" src="" alt="Vista previa">
+    </div>
+
+    <!-- <script src="pedirCinta.js"></script> -->
+    <script src="pedirConjuntos.js"></script>
+    <script src="../efectos/zoom/lupa.js"></script>
 </body>
 </html>

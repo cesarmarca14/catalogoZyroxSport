@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="color-entero.css">
+
+    <link rel="stylesheet" href="../styloscard/conjunto-style.css">
+    <link rel="stylesheet" href="../efectos/zoom/stylelupa.css">
     <title>Colores y Tallas - ZYROX SPORT</title>
 </head>
 <body>
@@ -31,7 +33,7 @@
         <div class="colores-grid">
             <div class="color-card-v2" data-color="Negro">
                 <div class="color-img-container">
-                    <img src="img_Entero/negro_Entero.jpeg" alt="Negro" class="color-img-real cursor-pointer">
+                    <img src="img_Entero/melange_Entero.jpeg" alt="Negro" class="color-img-real">
                 </div>
                 <h4>Negro</h4>
                 <span class="badge-stock">Disponible</span>
@@ -64,9 +66,9 @@
                 </div>
             </div>
 
-            <div class="color-card-v2" data-color="Marino">
+            <div class="color-card-v2" data-color="Acero">
                 <div class="color-img-container">
-                    <img src="img_Entero/acero_Entero.jpeg" alt="Entero" class="color-img-real cursor-pointer">
+                    <img src="img_Entero/acero_Entero.jpeg" alt="Entero" class="color-img-real">
                 </div>
                 <h4>Acero</h4>
                 <span class="badge-stock">Disponible</span>
@@ -101,7 +103,7 @@
 
             <div class="color-card-v2" data-color="Melange">
                 <div class="color-img-container">
-                    <img src="img_Entero/melange_Entero.jpeg" alt="Color melange" class="color-img-real cursor-pointer">
+                    <img src="img_Entero/melange_Entero.jpeg" alt="Color melange" class="color-img-real">
                 </div>
                 <h4>Melange</h4>
                 <span class="badge-stock">Disponible</span>
@@ -136,7 +138,7 @@
 
             <div class="color-card-v2" data-color="Verde">
                 <div class="color-img-container">
-                    <img src="img_Entero/verde_Enterojpeg.jpeg" alt="Color verde" class="color-img-real cursor-pointer">
+                    <img src="img_Entero/verde_Enterojpeg.jpeg" alt="Color verde" class="color-img-real">
                 </div>
                 <h4>Verde</h4>
                 <span class="badge-stock">Disponible</span>
@@ -168,10 +170,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="color-card-v2" data-color="Beiz">
                 <div class="color-img-container">
-                    <img src="img_Entero/beiz_Entero.jpeg" alt="Beiz" class="color-img-real cursor-pointer">
+                    <img src="img_Entero/beiz_Entero.jpeg" alt="Color verde" class="color-img-real">
                 </div>
                 <h4>Beiz</h4>
                 <span class="badge-stock">Disponible</span>
@@ -204,9 +205,10 @@
                 </div>
             </div>
 
+
             <div class="color-card-v2" data-color="Marino">
                 <div class="color-img-container">
-                    <img src="img_Entero/marino_entero.jpeg" alt="Color verde" class="color-img-real cursor-pointer">
+                    <img src="img_Entero/marino_entero.jpeg" alt="Color verde" class="color-img-real">
                 </div>
                 <h4>Marino</h4>
                 <span class="badge-stock">Disponible</span>
@@ -238,10 +240,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="color-card-v2" data-color="Rata">
                 <div class="color-img-container">
-                    <img src="img_Entero/color_rata_entero.jpeg" alt="Color verde" class="color-img-real cursor-pointer">
+                    <img src="img_Entero/color_rata_entero.jpeg" alt="Color verde" class="color-img-real">
                 </div>
                 <h4>Rata</h4>
                 <span class="badge-stock">Disponible</span>
@@ -273,10 +274,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="color-card-v2" data-color="Azul Alianza">
                 <div class="color-img-container">
-                    <img src="img_Entero/azul_alianza.jpeg" alt="Color verde" class="color-img-real cursor-pointer">
+                    <img src="img_Entero/azul_alianza.jpeg" alt="Color verde" class="color-img-real">
                 </div>
                 <h4>Azul Alianza</h4>
                 <span class="badge-stock">Disponible</span>
@@ -308,7 +308,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+
+                </div>
+            </div>
+ </div>
 
         <div class="order-summary-bar">
             <button class="btn-send-order" onclick="abrirModalWhatsAppGlobal()">
@@ -323,7 +326,7 @@
             <p id="resumen-pedido-texto" style="color: var(--gris); font-size: 11px; margin-bottom: 15px; text-align: left; background: #1a1a1a; padding: 10px; border-radius: 6px; white-space: pre-wrap; max-height: 150px; overflow-y: auto;"></p>
             
             <button class="btn-wa-opt" onclick="enviarMensajeCompleto(1)">
-                🟢 ventas en tienda (936 506 776)
+                🟢 ventas en tienda  (936 506 776)
             </button>
             <button class="btn-wa-opt" onclick="enviarMensajeCompleto(2)">
                 🟢 venta por redes sociales (908 501 761)
@@ -332,13 +335,14 @@
         </div>
     </div>
 
-   <div id="modal-imagen" class="modal-wa" onclick="cerrarImagenGrande()">
+      <div id="modal-imagen" class="modal-wa" onclick="cerrarImagenGrande()">
     <div class="modal-preview-wrapper" onclick="event.stopPropagation()">
         <span class="close-modal-img" onclick="cerrarImagenGrande()">&times;</span>
         <img id="imagen-grande-src" src="" alt="Vista previa">
     </div>
-</div>
 
-    <script src="pedirEntero.js?v=2"></script>
+    <!-- <script src="pedirCinta.js"></script> -->
+    <script src="pedirConjuntos.js"></script>
+    <script src="../efectos/zoom/lupa.js"></script>
 </body>
 </html>
