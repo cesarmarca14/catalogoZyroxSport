@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color:var(--blanco); /* Asegura tu fondo oscuro */
+    background-color:var(--blanco);
     color: var(--blanco);
     scroll-behavior: smooth;
 }
@@ -66,18 +66,17 @@ nav {
     text-shadow: 3px 3px 15px rgba(18, 142, 214, 0.9);
 }
 
-/* Productos--- */
+/* Productos */
 .container { 
     padding: 50px 10%; 
 }
 
 .section-title {
-    color: var(--oscuro); /* Ajustado a blanco para que sea legible en fondo negro */
+    color: var(--oscuro);
     text-align: center;
     font-size: 32px;
 }
 
-/* --- FILAS DE 2 COLUMNAS --- */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -97,14 +96,12 @@ nav {
     flex-direction: column;
     align-items: center; 
     transition: transform 0.3s ease;
-    /* border: solid red; */
 }
 
 .product-card:hover {
     transform: translateY(-5px); 
 }
 
-/* --- IMÁGENES CENTRADAS Y CONTROLADAS --- */
 .product-img {
     width: 100%;
     max-width: 220px;   
@@ -129,7 +126,6 @@ nav {
     margin: 10px 0;
     color: var(--gris);
     font-size: 14px;
-    
 }
 
 .btn-buy {
@@ -149,7 +145,7 @@ nav {
     background-color: #1ebe57;
 }
 
-/* --- Sección de Tarjetas de Colores (Identidad ZYROX) --- */
+/* Sección de Tarjetas de Colores */
 #colores-seccion {
     padding: 60px 20px;
     background-color: var(--blanco); 
@@ -166,7 +162,7 @@ nav {
 
 .color-card-v2 {
     background-color: var(--oscuro); 
-    border: 1px solid #333;          
+    border: 1px solid #333;           
     border-radius: 12px;
     padding: 20px 15px;
     width: 230px;                    
@@ -188,6 +184,7 @@ nav {
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .color-img-real {
@@ -203,16 +200,6 @@ nav {
     font-weight: 600;
 }
 
-.color-card-v2 .badge-tela {
-    display: inline-block;
-    border: 1px solid var(--cian);
-    color: var(--cian);
-    padding: 5px 15px;
-    font-size: 12px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-}
-
 .color-card-v2 .badge-stock {
     font-size: 14px;
     font-weight: bold;
@@ -220,21 +207,7 @@ nav {
     color: var(--cian);
 }
 
-/* Footer */
-footer {
-    padding: 30px;
-    text-align: center;
-    background-color: #000;
-    border-top: 1px solid #333;
-}
-
-
-
-/* ==========================================================================
-   NUEVOS COMPONENTES: SELECTOR DE CANTIDAD, BARRA FIJA Y MODAL WA
-   ========================================================================== */
-
-/* Selector de Cantidades dentro de cada tarjeta */
+/* Componentes: Selector de Cantidad, Barra Fija y Modal WA */
 .quantity-selector {
     display: flex;
     align-items: center;
@@ -277,7 +250,6 @@ footer {
     text-align: center;
 }
 
-/* Botón flotante/fijo inferior de envío total */
 .order-summary-bar {
     margin-top: 45px;
     text-align: center;
@@ -304,7 +276,7 @@ footer {
     transform: scale(1.03);
 }
 
-/* Ventana emergente (Modal de selección de línea) */
+/* Modal WA */
 .modal-wa {
     display: none;
     position: fixed;
@@ -328,8 +300,25 @@ footer {
     width: 100%;
     max-width: 320px;
     text-align: center;
+    position: relative; /* NECESARIO PARA LA X */
     box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);
     animation: aparecerModal 0.3s ease-out;
+}
+
+.close-modal {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover, .close-modal:focus {
+    color: #ff4d4d;
+    text-decoration: none;
 }
 
 .modal-wa-content h3 {
@@ -379,154 +368,20 @@ footer {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* ==========================================================================
-   7. MODO RESPONSIVO (TABLETS & CELULARES)
-   ========================================================================== */
-
-/* 📱 MODO CELULAR */
+/* Responsivo */
 @media (max-width: 600px) {
-    nav {
-        padding: 15px 20px;
-        flex-direction: column; 
-        gap: 15px;
-    }
-
-    .nav-links {
-        padding: 0;
-        margin: 0;
-        gap: 15px;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .nav-links a {
-        font-size: 12px; 
-    }
-
-    .hero {
-        font-size: 15px; 
-        height: 50vh;    
-        -webkit-text-stroke: 1px #0592ca;
-    }
-
-    .container {
-        padding: 30px 4%; 
-    }
-
-    /* --- Fuerza filas de 2 en productos para celular --- */
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr) !important; 
-        gap: 12px;
-        max-width: 100%;
-    }
-
-    /* --- Fuerza filas de 2 en la sección de colores para celular --- */
-    .colores-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px;
-        max-width: 100%;
-    }
-
-    .product-card, .color-card-v2 {
-        padding: 12px 8px; 
-        width: 100% !important;
-        box-sizing: border-box;
-    }
-
-    /* ==========================================================================
-       ⚠️ SE CONSERVA TU ALTURA ORIGINAL SIN CAMBIOS DE PROPORCIÓN EN LAS IMÁGENES
-       ========================================================================== */
-    .product-img, .color-img-container {
-        height: 180px; 
-    }
-
-    /* Ajustes para los Selectores de Cantidad en Celular */
-    .quantity-selector {
-        width: 100%;
-        gap: 8px;
-        padding: 4px 6px;
-    }
-    
-    .btn-qty {
-        width: 22px;
-        height: 22px;
-        font-size: 13px;
-    }
-    
-    .qty-value {
-        font-size: 13px;
-    }
-
-    .btn-send-order {
-        padding: 12px 25px;
-        font-size: 14px;
-        width: 95%;
-    }
-
-    /* Ajuste Proporcional de Textos */
-    .section-title {
-        color: var(--oscuro);
-        font-size: 18px; 
-    }
-
-    .product-card .badge-tela, 
-    .color-card-v2 .badge-tela {
-        font-size: 10px;        
-        padding: 3px 10px;
-        margin-bottom: 6px;
-    }
-
-    .product-card .tallas {
-        font-size: 11px;        
-        margin: 6px 0;
-    }
-
-    .product-card .btn-buy {
-        padding: 8px 10px;      
-        font-size: 11px;        
-    }
-
-    .color-card-v2 h4 {
-        font-size: 13px;        
-        margin: 6px 0;
-    }
-
-    .color-card-v2 .badge-stock {
-        font-size: 11px;        
-        margin: 2px 0px 8px 0px;
-    }
-}
-
-/* 慶 MODO TABLET */
-@media (min-width: 601px) and (max-width: 992px) {
-    nav {
-        padding: 10px 30px;
-    }
-
-    .hero {
-        font-size: 40px; 
-        height: 55vh;
-    }
-
-    .container {
-        padding: 40px 5%;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr) !important; 
-        gap: 20px;
-    }
-    
-    .colores-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 20px;
-        max-width: 700px;
-        margin: 30px auto 0 auto;
-    }
-    
-    .color-card-v2 {
-        width: 100% !important;
-    }
+    nav { padding: 15px 20px; flex-direction: column; gap: 15px; }
+    .nav-links { padding: 0; margin: 0; gap: 15px; justify-content: center; width: 100%; }
+    .nav-links a { font-size: 12px; }
+    .hero { font-size: 15px; height: 50vh; -webkit-text-stroke: 1px #0592ca; }
+    .container { padding: 30px 4%; }
+    .product-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px; max-width: 100%; }
+    .colores-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 12px; max-width: 100%; }
+    .product-card, .color-card-v2 { padding: 12px 8px; width: 100% !important; box-sizing: border-box; }
+    .product-img, .color-img-container { height: 180px; }
+    .quantity-selector { width: 100%; gap: 8px; padding: 4px 6px; }
+    .btn-qty { width: 22px; height: 22px; font-size: 13px; }
+    .qty-value { font-size: 13px; }
+    .btn-send-order { padding: 12px 25px; font-size: 14px; width: 95%; }
+    .section-title { font-size: 18px; }
 }
